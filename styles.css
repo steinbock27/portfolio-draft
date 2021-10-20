@@ -1,12 +1,18 @@
-*{
+html{
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    height: 100%;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
 }
 body{
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    font-size: 10px;
-}
+    margin: 0;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: auto 1fr auto;
+}   
 
 nav{    
     display: flex;
@@ -46,10 +52,10 @@ article:last-of-type{
 }
 
 img {
-    max-width: 4rem;
-    height: auto;
+    width: 100%;
+    object-fit: fill;
 }
 
 nav a:hover{
-    background-color: turquoise;
+    background-color: whitesmoke;
 }
