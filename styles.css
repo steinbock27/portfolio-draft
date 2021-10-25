@@ -3,12 +3,16 @@ html{
     font-family: 'Courier New', Courier, monospace;
     font-size: 10px;
     height: 100%;
+    margin: 0%;
+    padding: 0%;
 }
 *,*::after,*::before{
     box-sizing: inherit;
 }
 body{
+    font-size: 1.6rem;
     margin: 0;
+    padding: 0%;
     display: grid;
     grid-gap: 1rem;
     grid-template-rows: auto 1fr auto;
@@ -16,46 +20,51 @@ body{
 
 nav{    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 a {
-    flex-grow: 1;
+    flex: 1 0 auto;
     color: black;
     text-decoration: none;
     text-align: center;
-    width: 10px;
 
 }
 
 main{
-    background: peru; 
-    display: flex;/* 
-    justify-content: center;
-    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }  
    
 article{
-    flex: 1 1 250px;
+    display: grid;
+    place-items: center;
     margin: 10px;
     padding: 10px;
     text-align: center;
     box-shadow: 0 3px 10px rgb(0 0 250 / 0.4);
+    align-items: start;
 }
 
-article:first-of-type{
-    background-color: antiquewhite;
-}
-
-article:last-of-type{
-    background-color: thistle;
+article nav{
+    width: 70%;
 }
 
 img {
     width: 100%;
-    object-fit: fill;
+    object-fit: scale-down;
 }
 
 nav a:hover{
-    background-color: whitesmoke;
+    background-color: antiquewhite;
+}
+
+h1{
+    align-self: end;
+}
+
+h3{
+    font-size: 5rem;
+    margin: 10px;
+    align-self: end;
 }
